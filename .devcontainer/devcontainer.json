@@ -1,0 +1,16 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Java + JDBC Lab",
+  "build": { "dockerfile": "Dockerfile" },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "ms-python.python",
+    "redhat.vscode-yaml"
+  ],
+  "forwardPorts": [8080],
+  "postCreateCommand": "javac -version && java -version",
+  "remoteUser": "vscode"
+}
